@@ -20,7 +20,7 @@ export const Banner = () => {
   }, []);
 
   return (
-    <div>
+    <div className="banner">
       <div className="display-text">
         <div className="text">
           <h1>Take it to</h1>

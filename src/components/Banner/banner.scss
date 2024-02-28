@@ -1,5 +1,8 @@
 @import '../../utils/globelstyle.scss';
 
+.banner{
+  margin: 80px 0;
+}
 
 .display-text {
   display: flex;
@@ -11,7 +14,7 @@
 .text {
   text-align: center;
   h1 {
-    font-size: 70px;
+    font-size: 80px;
     font-weight: 700;
     letter-spacing: -.02em;
     margin: 0;
