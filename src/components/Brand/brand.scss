@@ -1,0 +1,39 @@
+.brand {
+  text-align: center;
+  margin-top: 70px;
+  padding: 0 20px;
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+  }
+}
+
+.brand-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  img {
+    opacity: 0.5;
+  }
+}
+
+.brand-wrapper{ img:hover {
+  opacity: 1;
+}}
+
+@media screen and (max-width: 1000px) {
+  .brand-wrapper {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    img {
+      margin-top: 20px;
+    }
+  }
+    
+}
