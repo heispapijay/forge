@@ -80,60 +80,76 @@
 }
 
 @media screen and (max-width: 768px) {
+  .carousel-container {
+    height: 500px;
+  }
   .image1 {
     width: 215px;
     margin: 10px;
+    height: 500px;
   }
   .image2 {
     width: 215px;
     margin: 10px;
+    height: 500px;
   }
   .image3 {
     width: 215px;
     margin: 10px;
+    height: 500px;
   }
   .image4 {
     width: 215px;
     margin: 10px;
+    height: 500px;
   }
   .image5 {
     width: 215px;
     margin: 10px;
+    height: 500px;
   }
   .whitecover-top {
     top: 9px;
     align-self: stretch;
   }
   .overlay {
-    height: 79%;
+    height: 82%;
   }
 }
 
 @media screen and (max-width: 380px) {
   .overlay {
-    height: 48%;
+    height: 102%;
   }
-  .whitecover-top {
+    .whitecover-top {
     top: 6px;
   }
+  .carousel-container {
+    height: 300px;
+  }
   .image1 {
-    width: 128px;
-    margin: 5px;
+    width: 180px;
+    margin: 6px;
+    height: 300px;
   }
   .image2 {
-    width: 128px;
-    margin: 5px;
+    width: 180px;
+    margin: 6px;
+    height: 300px;
   }
   .image3 {
-    width: 128px;
-    margin: 5px;
+    width: 180px;
+    margin: 6px;
+    height: 300px;
   }
   .image4 {
-    width: 128px;
-    margin: 5px;
+    width: 180px;
+    margin: 6px;
+    height: 300px;
   }
   .image5 {
-    width: 128px;
-    margin: 5px;
+    width: 180px;
+    margin: 6px;
+    height: 300px;
   }
 }
