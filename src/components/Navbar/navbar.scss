@@ -32,6 +32,15 @@
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  a {
+    text-decoration: none;
+    color: $neutralColor4;
+    font-weight: 700;
+  }
+}
+
+.nav-links a:hover {
+  color: $neutralColor2;
 }
 
 .menu-icon {
@@ -43,12 +52,6 @@
   justify-content: center;
   cursor: pointer;
   border-radius: 50%;
-}
-
-a {
-  text-decoration: none;
-  color: $neutralColor4;
-  font-weight: 700;
 }
 
 .mobile-menu {
