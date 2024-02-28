@@ -1,44 +1,43 @@
 @import "../../utils/globelstyle.scss";
 
-
 .image1 {
-  background: url(../../assets/1.png) no-repeat;
+  background: url(../../assets/3.png) no-repeat;
   background-size: 100%;
   width: 271px;
   height: 500px;
   margin: 10px;
 }
 
-.image2{
-    background: url(../../assets/2.png) no-repeat;
-    background-size: 100%;
-    width: 271px;
-    height: 500px;
-    margin: 10px;  
+.image2 {
+  background: url(../../assets/4.png) no-repeat;
+  background-size: 100%;
+  width: 271px;
+  height: 500px;
+  margin: 10px;
 }
 
-.image3{
-    background: url(../../assets/3.png) no-repeat;
-    background-size: 100%;
-    width: 271px;
-    height: 500px;
-    margin: 10px;  
+.image3 {
+  background: url(../../assets/23.png) no-repeat;
+  background-size: 100%;
+  width: 271px;
+  height: 500px;
+  margin: 10px;
 }
 
-.image4{
-    background: url(../../assets/4.png) no-repeat;
-    background-size: 100%;
-    width: 271px;
-    height: 500px;
-    margin: 10px;  
+.image4 {
+  background: url(../../assets/8.png) no-repeat;
+  background-size: 100%;
+  width: 271px;
+  height: 500px;
+  margin: 10px;
 }
 
-.image5{
-    background: url(../../assets/5.png) no-repeat;
-    background-size: 100%;
-    width: 271px;
-    height: 500px;
-    margin: 10px;  
+.image5 {
+  background: url(../../assets/5.png) no-repeat;
+  background-size: 100%;
+  width: 271px;
+  height: 500px;
+  margin: 10px;
 }
 
 .whitecover-top {
@@ -82,24 +81,59 @@
 
 @media screen and (max-width: 768px) {
   .image1 {
-    width: 200px;
+    width: 215px;
+    margin: 10px;
+  }
+  .image2 {
+    width: 215px;
+    margin: 10px;
+  }
+  .image3 {
+    width: 215px;
+    margin: 10px;
+  }
+  .image4 {
+    width: 215px;
+    margin: 10px;
+  }
+  .image5 {
+    width: 215px;
     margin: 10px;
   }
   .whitecover-top {
     top: 9px;
     align-self: stretch;
   }
-    .overlay {
-        height: 79%;
-    }
+  .overlay {
+    height: 79%;
+  }
 }
 
-@media screen and (max-width: 380px){
-    .overlay {
-        height: 48%;
-    }
-    .image1 {
-        width: 120px;
-        margin: 10px;
-      }
+@media screen and (max-width: 380px) {
+  .overlay {
+    height: 48%;
+  }
+  .whitecover-top {
+    top: 6px;
+  }
+  .image1 {
+    width: 128px;
+    margin: 5px;
+  }
+  .image2 {
+    width: 128px;
+    margin: 5px;
+  }
+  .image3 {
+    width: 128px;
+    margin: 5px;
+  }
+  .image4 {
+    width: 128px;
+    margin: 5px;
+  }
+  .image5 {
+    width: 128px;
+    margin: 5px;
+  }
 }
