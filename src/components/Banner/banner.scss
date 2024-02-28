@@ -1,7 +1,7 @@
 @import '../../utils/globelstyle.scss';
 
 .banner{
-  margin: 80px 0;
+  margin: 160px 0 80px 0;
 }
 
 .display-text {
@@ -36,11 +36,12 @@
 }
 
 .sphere-image {
-  margin-right:  10px;
+  margin: 0 10px;
   background: url(../../assets/Image.png) no-repeat center;
   width: 170px;
   height: 52px;
   display: inline-block;
+
 }
 
 .subtext{
@@ -64,7 +65,7 @@ margin-bottom: 20px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
   .text {
     h1 {
       font-size: 50px;
