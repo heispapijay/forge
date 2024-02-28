@@ -1,0 +1,72 @@
+@import "../../utils/globelstyle.scss";
+
+.image1 {
+  background: url(../../assets/1.png) no-repeat;
+  background-size: 100%;
+  width: 271px;
+  height: 500px;
+  margin: 10px;
+}
+
+.whitecover-top {
+  width: 100vw;
+  z-index: 1;
+  position: relative;
+}
+
+.whitecover-bottom {
+  width: 100vw;
+  z-index: 2;
+  position: relative;
+}
+
+.carousel-container {
+  position: relative;
+  z-index: -1;
+  padding-top: 2px;
+}
+
+.overlay {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.caro {
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .image1 {
+    width: 200px;
+    margin: 10px;
+  }
+  .whitecover-top {
+    top: 9px;
+    align-self: stretch;
+  }
+    .overlay {
+        height: 79%;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .overlay {
+        height: 48%;
+    }
+    .image1 {
+        width: 120px;
+        margin: 10px;
+      }
+}

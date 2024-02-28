@@ -1,0 +1,70 @@
+@import '../../utils/globelstyle.scss';
+
+.default-btn{
+    background-color: $primaryColor4;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid $primaryColor4;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.default-btn:hover{
+    background-color: #fff;
+    color: $primaryColor4;
+    transition: all 1s ease-out ;
+    border: 1px solid $primaryColor4;
+}
+
+.default-btn:hover .sphereimage img {
+  filter: invert(1);
+}
+
+.default-btn:hover .sphereimage .pattern {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.sphereimage{
+  width: 33px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 13px;
+  }
+}
+
+.pattern {
+  transform-origin: center;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 2s linear infinite;
+  }
+
+@-webkit-keyframes spin {
+  100%{-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spin {
+  100%{-moz-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+  100%{-webkit-transform: rotate(360deg);}
+}
+
