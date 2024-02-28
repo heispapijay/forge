@@ -1,4 +1,4 @@
-@import '../../utils/globelstyle.scss';
+@import "../../utils/globelstyle.scss";
 
 .nav {
   position: relative;
@@ -60,16 +60,18 @@
   align-items: center;
   position: absolute;
   justify-content: space-around;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   background: rgba(252, 252, 253, 0.8);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-box-align: center;
   z-index: 9999;
-
-    a {
-        font-size: 30px;
-    }
+  
+  a {
+    font-size: 30px;
+    color: $neutralColor4;
+    font-weight: 700;
+  }
 }
 
 @media screen and (max-width: 768px) {
