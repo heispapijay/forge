@@ -1,0 +1,78 @@
+@import "../../utils/globelstyle.scss";
+
+.about-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.tagline {
+  color: $neutralColor1;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.title-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h1 {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+}
+
+.right-about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 580px;
+
+  p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1043px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .right-about {
+    align-items: center;
+    text-align: center;
+  }
+    
+}
+
+@media screen and (max-width: 400px){
+    .title-left {
+        h1 {
+            font-size: 50px;
+        }
+      }
+    
+      .right-about {
+        p{
+            font-size: 16px;
+        }
+      }
+}

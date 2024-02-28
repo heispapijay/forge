@@ -1,15 +1,14 @@
 import "./App.css";
-import { Banner } from "./components/Banner/Banner";
-import { Carousel } from "./components/Carousel/Carousel";
+import "./utils/resetstyle.scss";
 import { Navbar } from "./components/Navbar/Navbar";
+import { Home } from "./screens/Home/Home";
 
 function App() {
 
   return (
     <>
       <Navbar />
-      <Banner />
-      <Carousel />
+      <Home />
     </>
   );
 }

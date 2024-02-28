@@ -1,10 +1,10 @@
 @import '../../utils/globelstyle.scss';
 
 .default-btn{
-    background-color: $primaryColor4;
+    background-color: $neutralColor1;
     color: #fff;
     padding: 10px 20px;
-    border: 1px solid $primaryColor4;
+    border: 1px solid $neutralColor1;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -15,9 +15,9 @@
 
 .default-btn:hover{
     background-color: #fff;
-    color: $primaryColor4;
+    color: $neutralColor1;
     transition: all 1s ease-out ;
-    border: 1px solid $primaryColor4;
+    border: 1px solid $neutralColor1;
 }
 
 .default-btn:hover .sphereimage img {
@@ -28,6 +28,23 @@
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
   animation-play-state: paused;
+}
+
+.outline{
+  background-color: #fff;
+  color: $neutralColor1;
+  border: 1px solid $neutralColor1;
+
+  .sphereimage {
+    filter: invert(1);
+  }
+}
+
+.outline:hover{
+  background-color: $neutralColor1;
+  color: #fff;
+  transition: all 1s ease-out ;
+  border: 1px solid $neutralColor1;
 }
 
 .sphereimage{

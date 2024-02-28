@@ -1,0 +1,74 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-down{
+    border: 1px solid #eee;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+
+    img {
+        display: inline-block;
+        max-width: 100%;
+        vertical-align: middle;
+        overflow: hidden;
+      }
+
+      .pattern {
+        animation: spin 5s linear infinite;
+        overflow: hidden;
+        }
+}
+
+.scroll-img{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+  .down-arrow {
+    width: 25px;
+    rotate: 90deg;
+    transform: translateY(-50%);
+    overflow: hidden;
+    animation: moveUpDown 3s infinite;
+}
+
+.icon-cover{
+    position: absolute;
+    border: 1px solid #eee;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+@keyframes moveUpDown {
+    0% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
+}
