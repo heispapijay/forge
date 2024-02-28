@@ -13,10 +13,10 @@ export const Carousel = () => {
         <div className="carousel-container">
          <Marquee>
            <div className="image1"></div>
-           <div className="image1"></div>
-           <div className="image1"></div>
-           <div className="image1"></div>
-           <div className="image1"></div>
+           <div className="image2"></div>
+           <div className="image3"></div>
+           <div className="image4"></div>
+           <div className="image5"></div>
         </Marquee>
       </div>
     </div>
