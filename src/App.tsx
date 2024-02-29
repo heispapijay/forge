@@ -32,7 +32,7 @@ function App() {
             <Routes>
               <Route path="/" />
               <Route index element={<Home />} />
-              <Route path="*" element={<div>Page not found</div>} />
+              <Route path="*" element={<div className="error">Page not found</div>} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contactus />} />
             </Routes>
