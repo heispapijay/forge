@@ -13,7 +13,7 @@ export const Navbar = () => {
     <nav className="nav">
       <div className="navbar  wrapper">
         <div className="nav-logo">
-          <Logo />
+         <Link to="/"><Logo /></Link>
         </div>
 
         <div className="nav-links">
