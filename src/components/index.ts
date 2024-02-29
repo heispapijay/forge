@@ -6,3 +6,4 @@ export { Brand } from './Brand/Brand';
 export { Button } from './Button/Button';
 export { Carousel } from './Carousel/Carousel';
 export { Navbar } from './Navbar/Navbar';
+export { ServiceCard } from './Cards/ServiceCard';

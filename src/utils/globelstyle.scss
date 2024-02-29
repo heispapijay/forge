@@ -18,3 +18,13 @@ $neutralColor5: #b1b5c3;
 $neutralColor6: #e6e8ec;
 $neutralColor7: #f4f5f6;
 $neutralColor8: #fcfcfd;
+
+
+.default-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }

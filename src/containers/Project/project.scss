@@ -1,0 +1,45 @@
+@import "../../utils/globelstyle.scss";
+
+.project-section {
+  background: $neutralColor1;
+  padding: 70px 20px;
+
+  // override the default color
+  .tagline {
+    color: $neutralColor7;
+  }
+  h1 {
+    color: $neutralColor7;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-area{
+    padding: 100px 0;
+    .subheaders {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-area{
+        padding: 50px 0;
+    }
+}
+
+
+@media screen and (max-width: 384px) {
+  .content {
+    justify-content: flex-start;
+  }
+    
+}

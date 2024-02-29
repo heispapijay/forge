@@ -1,0 +1,65 @@
+@import "../../utils/globelstyle.scss";
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20px;
+  gap: 20px;
+
+  h4 {
+    font-size: 27px;
+    font-weight: 600;
+    color: $neutralColor7;
+  }
+
+  p {
+    max-width: 290px;
+    color: $neutralColor7;
+  }
+
+  .on-hover {
+    display: none;
+  }
+
+  // override the default color
+  .sphereimage {
+    width: 40px;
+  }
+  .arrow {
+    width: 17px;
+    filter: invert(1);
+  }
+}
+
+.service-card:hover {
+  .on-hover {
+    display: block;
+  }
+  .outline-img {
+    display: none;
+  }
+  .change-color {
+    fill: $neutralColor7;
+  }
+  .arrow {
+    filter: invert(0);
+  }
+}
+
+.service-image {
+  height: 275px;
+  img {
+    width: 290px;
+  }
+}
+
+@media screen and (max-width: 704px) {
+  .service-image {
+    height: 230px;
+    img {
+      width: 244px;
+    }
+  }
+    
+}
