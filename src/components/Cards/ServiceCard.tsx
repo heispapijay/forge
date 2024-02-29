@@ -1,6 +1,5 @@
 import "./cards.scss";
 import arrow from "../../assets/arrow.svg";
-import pattern from "../../assets/pattern.svg";
 import outlinebox from "../../assets/outlinebox.svg";
 
 interface ServiceCardProps {
