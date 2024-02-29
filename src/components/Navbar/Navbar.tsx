@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import "./navbar.scss";
 
@@ -16,11 +17,11 @@ export const Navbar = () => {
         </div>
 
         <div className="nav-links">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/work">Work</a>
-          <a href="/blog">Blog</a>
-          <a href="/contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/work">Work</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/contact">Contact</Link>
           <div className="menu-icon" onClick={toggleMobileMenu}>
             <svg
               width="26"
@@ -56,11 +57,11 @@ export const Navbar = () => {
       </div>
       {isMobileMenuOpen && (
         <div className="mobile-menu">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/work">Work</a>
-          <a href="/blog">Blog</a>
-          <a href="/contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="about">About</Link>
+          <Link to="/work">Work</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/contact">Contact</Link>
         </div>
       )}
     </nav>

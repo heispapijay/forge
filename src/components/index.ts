@@ -1,0 +1,8 @@
+// export { Home } from './Home';
+
+export { About } from './About/About';
+export { Banner } from './Banner/Banner';
+export { Brand } from './Brand/Brand';
+export { Button } from './Button/Button';
+export { Carousel } from './Carousel/Carousel';
+export { Navbar } from './Navbar/Navbar';

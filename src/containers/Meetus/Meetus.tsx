@@ -1,5 +1,4 @@
-import { About } from '../../components/About/About'
-import { Brand } from '../../components/Brand/Brand'
+import { About, Brand } from "../../components"
 
 export const Meetus = () => {
   return (

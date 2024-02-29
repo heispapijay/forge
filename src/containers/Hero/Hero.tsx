@@ -1,5 +1,4 @@
-import { Banner } from '../../components/Banner/Banner'
-import { Carousel } from '../../components/Carousel/Carousel'
+import { Banner, Carousel } from "../../components"
 
 export const Hero = () => {
   return (
