@@ -29,6 +29,11 @@
   opacity: 1;
 }}
 
+.brand-story {
+  text-align: center;
+  max-width: 600px;
+}
+
 @media screen and (max-width: 1000px) {
   .brand-wrapper {
     justify-content: center;
