@@ -6,6 +6,7 @@ import { ScaleLoader } from "react-spinners";
 import Logo from "./components/Logo/Logo";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { About, Home, Contactus } from "./screens";
+import { Footer } from "./containers";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +37,7 @@ function App() {
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contactus />} />
             </Routes>
+            <Footer />
           </BrowserRouter>
         </div>
       )}

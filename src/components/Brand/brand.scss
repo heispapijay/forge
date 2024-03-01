@@ -8,15 +8,18 @@
     letter-spacing: 7px;
     text-transform: uppercase;
   }
+
+  .default-wrapper {
+    .subheaders {
+      align-items: center;
+    }
+  }
 }
 
 .brand-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   img {
     opacity: 0.5;
   }
