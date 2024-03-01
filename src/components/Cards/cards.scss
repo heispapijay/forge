@@ -123,13 +123,12 @@
   .work-card {  
     img {
       height: 620px;
-      width: 100%;
+      width: 95vw;
     }}
 }
 
 @media screen and (max-width: 704px) {
   .service-image {
-    height: 230px;
     img {
       width: 244px;
     }
