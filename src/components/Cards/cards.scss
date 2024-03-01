@@ -1,5 +1,7 @@
 @import "../../utils/globelstyle.scss";
 
+
+//SERVICE CARD
 .service-card {
   display: flex;
   flex-direction: column;
@@ -56,6 +58,8 @@
   }
 }
 
+
+//WORK CARD
 .work-card {
   background-color: $neutralColor2;
   border-radius: 10px;
@@ -119,6 +123,47 @@
   }  
 }
 
+//REVIEW CARD
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: $neutralColor7;
+  max-width: 380px;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $neutralColor6;
+  }
+
+  p {
+    color: $neutralColor4;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .user{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .linebreak {
+    width: 100%;
+    height: 1px;
+    background-color: $neutralColor6;
+    border-radius: 100%;
+  }
+}
+
+
+
+//MEDIA QUERIES
 @media screen and (max-width: 1024px) {
   .work-card {  
     img {

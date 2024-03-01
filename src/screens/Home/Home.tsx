@@ -1,7 +1,7 @@
 import "./home.scss";
 import arrow from "../../assets/arrow.svg";
 import scrolldown from "../../assets/scrolldown.svg";
-import { Hero, Meetus, Project } from "../../containers";
+import { Hero, Meetus, Project, Review } from "../../containers";
 
 export const Home = () => {
   return (
@@ -17,6 +17,7 @@ export const Home = () => {
       </div>
       <Meetus />
       <Project />
+      <Review />
     </div>
   );
 };

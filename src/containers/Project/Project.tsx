@@ -1,10 +1,12 @@
 import { ServiceCard, WorkCard } from "../../components";
-import webdesign from "../../assets/serviceimg/01.webp";
 import branding from "../../assets/serviceimg/01.webp";
 import design from "../../assets/serviceimg/02.webp";
 import developement from "../../assets/serviceimg/03.webp";
-import project1 from "../../assets/project/01.gif";
+import project1 from "../../assets/project/01.webp";
 import project2 from "../../assets/project/02.webp";
+import project3 from "../../assets/project/03.webp";
+import project4 from "../../assets/project/04.webp";
+import project5 from "../../assets/project/05.webp";
 import arrow from "../../assets/arrow.svg";
 import "./project.scss";
 
@@ -51,11 +53,11 @@ export const Project = () => {
                 image={project1}
               />
               <WorkCard title="Hazard 1990" tag="Branding" image={project2} />
-              <WorkCard title="Hazard 1990" tag="Branding" image={webdesign} />
+              <WorkCard title="Hazard 1990" tag="Branding" image={project3} />
             </div>
             <div className="right-side">
-              <WorkCard title="Web Design" tag="Web Design" image={webdesign} />
-              <WorkCard title="Web Design" tag="Web Design" image={webdesign} />
+              <WorkCard title="Pluto" tag="Development" image={project4} />
+              <WorkCard title="Bubox" tag="Design" image={project5} />
               <div className="view-more">
                 <span className="sphereimage">
                   <svg
