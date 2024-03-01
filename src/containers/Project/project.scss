@@ -3,6 +3,7 @@
 .project-section {
   background: $neutralColor1;
   padding: 70px 20px;
+  overflow: hidden;
 
   // override the default color
   .tagline {
@@ -52,12 +53,30 @@
   }
 }
 
+.view-more {
+  margin: 100px;
+  .sphereimage{
+    width: 300px;
+    .center-viewmore{
+      position: absolute;
+    }
+    p {
+      font-weight: 700;
+    }
+  }  
+  .arrow {
+    width: 29px;
+    filter: invert(0);
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .our-work{
     flex-direction: column;
 
     .right-side{
       padding-top: 15px;
+      align-items: center;
     }
   }
 }
@@ -66,12 +85,19 @@
     .section-area{
         padding: 50px 0;
     }
+    .view-more {
+      margin: 20px 0;}
 }
 
 
 @media screen and (max-width: 384px) {
   .content {
     justify-content: flex-start;
+  }
+  .view-more {
+    .sphereimage{
+      width: 90%;
+    }
   }
     
 }
