@@ -2,6 +2,7 @@
 
 .nav {
   position: fixed;
+  border-bottom: 0.5px solid #d4d4d449;
   display: flex;
   align-items: center;
   right: 0px;
@@ -34,7 +35,7 @@
   margin-left: auto;
   margin-right: auto;
   z-index: 9999;
-  border-bottom: 0.5px solid #d4d4d449;
+  
 }
 
 .nav-links {
@@ -87,6 +88,7 @@
     text-align: center;
   }
 }
+
 
 @media screen and (max-width: 768px) {
   .nav-links {

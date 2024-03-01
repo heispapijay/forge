@@ -5,18 +5,20 @@ import "./carousel.scss";
 
 export const Carousel = () => {
   return (
-
     <div className="caro">
-        <div className="overlay">
-            <img className="whitecover-top" src={top} alt="whitespace" />
-            <img className="whitecover-bottom" src={bottom} alt="whitespace" />        </div>
-        <div className="carousel-container">
-         <Marquee>
-           <div className="image1"></div>
-           <div className="image2"></div>
-           <div className="image3"></div>
-           <div className="image4"></div>
-           <div className="image5"></div>
+      <div className="overlay">
+        <img className="whitecover-top" src={top} alt="whitespace" />
+        <img className="whitecover-bottom" src={bottom} alt="whitespace" />{" "}
+      </div>
+      <div className="carousel-container">
+        <Marquee>
+          <div className="image1"></div>
+          <div className="image2"></div>
+          <div className="image3"></div>
+          <div className="image4"></div>
+          <div className="image5"></div>
+          <div className="image6"></div>
+          <div className="image7"></div>
         </Marquee>
       </div>
     </div>

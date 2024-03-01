@@ -40,6 +40,23 @@
   margin: 10px;
 }
 
+.image6 {
+  background: url(../../assets/carousel/06.webp) no-repeat;
+  background-size: 100%;
+  width: 271px;
+  height: 500px;
+  margin: 10px;
+}
+
+.image7 {
+  background: url(../../assets/carousel/07.webp) no-repeat;
+  background-size: 100%;
+  width: 271px;
+  height: 500px;
+  margin: 10px;
+}
+
+
 .whitecover-top {
   width: 100vw;
   z-index: 1;
@@ -108,6 +125,16 @@
     margin: 10px;
     height: 500px;
   }
+  .image6 {
+    width: 215px;
+    margin: 10px;
+    height: 500px;
+  }
+  .image7 {
+    width: 215px;
+    margin: 10px;
+    height: 500px;
+  }
   .whitecover-top {
     top: 9px;
     align-self: stretch;
@@ -148,6 +175,16 @@
     height: 300px;
   }
   .image5 {
+    width: 180px;
+    margin: 6px;
+    height: 300px;
+  }
+  .image6 {
+    width: 180px;
+    margin: 6px;
+    height: 300px;
+  }
+  .image7 {
     width: 180px;
     margin: 6px;
     height: 300px;
