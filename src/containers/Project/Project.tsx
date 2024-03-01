@@ -1,5 +1,6 @@
-import { ServiceCard } from "../../components";
-import webdesign from "../../assets/Img.png";
+import { ServiceCard, WorkCard } from "../../components";
+import webdesign from "../../assets/serviceimg/01.jpg";
+import project1 from "../../assets/project/01.gif";
 import "./project.scss";
 
 export const Project = () => {
@@ -36,6 +37,17 @@ export const Project = () => {
           <div className="subheaders">
             <p className="tagline">Meet Forge</p>
             <h1>We Work to Craft Solid Products & Project For You</h1>
+          </div>
+          <div className="our-work">
+            <div className="left-side">
+            <WorkCard title="John Walter Concept" tag="Design" image={project1} />
+            <WorkCard title="Hazard 1990" tag="Branding" image={webdesign} />
+            <WorkCard title="Hazard 1990" tag="Branding" image={webdesign} />
+            </div>
+            <div className="right-side">
+            <WorkCard title="Web Design" tag="Web Design" image={webdesign} />
+            <WorkCard title="Web Design" tag="Web Design" image={webdesign} />
+            </div>
           </div>
         </div>
       </div>

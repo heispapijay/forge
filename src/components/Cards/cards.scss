@@ -51,7 +51,80 @@
   height: 275px;
   img {
     width: 290px;
+    object-fit: cover;
+    height: 275px;
   }
+}
+
+.work-card {
+  background-color: $neutralColor2;
+  border-radius: 10px;
+  max-width: max-content;
+  border: 1px solid $neutralColor1;
+  cursor: pointer;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;}
+  img {
+    height: 620px;
+    width: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+  }
+  .onhover {
+    display: none;
+    img {
+      height: 35px;
+      width: 35px;
+    }
+    .sphereimage{
+      width: 60px;
+    }    
+  }
+}
+
+.work-card:hover {
+  border: 1px solid $neutralColor1;
+  .onhover-image {
+    filter: blur(10px);
+  -webkit-filter: blur(1px);
+  }
+  .onhover {
+    display: block;
+    position: absolute;
+    top: 45%;
+  }
+}
+
+.work-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 20px 27px 20px;
+  gap: 5px;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: $neutralColor7;
+  }
+
+  p {
+    max-width: 290px;
+    color: $neutralColor7;
+  }  
+}
+
+@media screen and (max-width: 1024px) {
+  .work-card {  
+    img {
+      height: 620px;
+      width: 100%;
+    }}
 }
 
 @media screen and (max-width: 704px) {
@@ -60,6 +133,5 @@
     img {
       width: 244px;
     }
-  }
-    
+  }   
 }
