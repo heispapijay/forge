@@ -48,7 +48,7 @@ const Logo: React.FC = () => {
     setAnimationInterval(interval);
   };
 
-  return <a className="logo">{text}</a>;
+  return <p className="logo">{text}</p>;
 };
 
 export default Logo;
