@@ -1,0 +1,76 @@
+@import '../../utils/globelstyle.scss';
+
+.blog-content {
+    position: relative;
+    max-width: 900px;
+    transition: all 1s ease;
+
+    &:hover {
+        .blog-onactive {
+            display: block;
+            position: absolute;
+            right: -20%;
+            top:-95px;
+            rotate: -9deg;
+            z-index: 9999;
+            transition: 1s ease-in-out;
+        }
+        transform: scale(1.1);
+    }
+}
+
+.blog-one {
+    max-width: 794px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-onactive {
+    display: none;
+}
+
+.time-posted {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+        width: fit-content;
+    }
+}
+
+.hr {
+    width: 60%;
+    height: 2px;
+    background: $neutralColor4;
+}
+
+.blog-title {
+    width: 550px;
+    h2 {
+        font-size: 25px;
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .blog-content {
+        &:hover {
+            .blog-onactive {
+                display: none;
+            }
+            transform: scale(1.1);
+            padding: 0 20px;
+        }
+    }
+    .blog-one {
+        max-width: 100%;
+    }
+    .blog-title {
+        width: 100%;
+        h2 {
+            font-size: 20px;
+            max-width: 100%;
+        }
+    }
+}
