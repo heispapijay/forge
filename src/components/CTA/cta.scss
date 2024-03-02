@@ -1,0 +1,23 @@
+@import "../../utils/globelstyle.scss";
+
+.cta-holder {
+  max-width: 684px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px 0 75px 0;
+
+  .subheaders {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cta-holder {
+    padding: 35px 0 50px 0;
+  }
+}

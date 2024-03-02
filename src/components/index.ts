@@ -10,3 +10,4 @@ export { ServiceCard } from './Cards/ServiceCard';
 export { WorkCard } from './Cards/WorkCard';
 export { ReviewCard } from './Cards/ReviewCard';
 export { Blognew } from './Blognew/Blognew';
+export { CTA } from './CTA/CTA';

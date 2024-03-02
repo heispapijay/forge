@@ -5,10 +5,12 @@ import dribble from "../../assets/dribbble.svg";
 import instagram from "../../assets/instagram.svg";
 import linkedin from "../../assets/linkedin.svg";
 import "./footer.scss";
+import { CTA } from "../../components";
 
 export const Footer = () => {
   return (
     <div className="footer">
+      <CTA />
       <div className="default-wrapper">
         <div className="footer-container">
           <div className="left-footer">
