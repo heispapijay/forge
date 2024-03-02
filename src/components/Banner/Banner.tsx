@@ -36,7 +36,7 @@ export const Banner = () => {
           High-end <span>digital experiences</span>. Created at the heart of Manhattan, we
           are a human-sized team.
         </p>
-        <Button text="Say Hello" onClick={() => {}} />
+        <Button text="Say Hello" to="/about" />
       </div>
     </div>
   );

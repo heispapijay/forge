@@ -62,6 +62,10 @@ export const Navbar = () => {
           <Link to="/work">Work</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/contact">Contact</Link>
+          <div className="footer-buttom">
+          <p>&copy; 2024 Forge Studio. All rights reserved.</p>
+          <p className="developedby">Developed by <a href="https://opaleke.vercel.app/">Josiah Opaleke</a></p>
+        </div>
         </div>
       )}
     </nav>

@@ -10,7 +10,7 @@ export const CTA = () => {
             <p className="tagline">Connect with us</p>
             <h1>Let's create your next big idea.</h1>
           </div>
-          <Button text="Get in touch" onClick={() => {}} />
+          <Button text="Get in touch" to="/contact" />
         </div>
       </div>
     </div>

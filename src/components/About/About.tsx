@@ -16,7 +16,7 @@ export const About = () => {
             believe that creation should be the point around which any strategy
             revolves.
           </p>
-          <OutlineButton text="See Our Process" onClick={About} />
+          <OutlineButton text="See Our Process" to="/about" />
         </div>
       </div>
     </div>
