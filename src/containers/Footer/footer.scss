@@ -1,2 +1,103 @@
 @import "../../utils/globelstyle.scss";
 
+.footer {
+  border-top: 0.5px solid #d4d4d449;
+  background: rgba(252, 252, 253, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  padding: 50px 20px;
+  
+  .nav-logo {
+    height: 40px;
+  }
+
+  p {
+    color: $neutralColor2;
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: $neutralColor4;
+    &:hover {
+      color: $neutralColor1;
+      font-weight: 700;
+    }
+  }
+}
+
+.left-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  max-width: 500px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  a {
+    font-weight: 600;
+  }
+}
+
+.right-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  p {
+    font-weight: 500;
+    color: $neutralColor3;
+  }
+}
+
+.footer-buttom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  p{
+    font-weight: 500;
+    color: $neutralColor3;
+  
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  a {
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 784px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .right-footer {
+    gap: 40px;
+  }
+  .footer-links {
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .footer-buttom {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
