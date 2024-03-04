@@ -1,3 +1,4 @@
+
 // export { Home } from './Home';
 
 export { About } from './About/About';
@@ -11,3 +12,5 @@ export { WorkCard } from './Cards/WorkCard';
 export { ReviewCard } from './Cards/ReviewCard';
 export { Blognew } from './Blognew/Blognew';
 export { CTA } from './CTA/CTA';
+export { PageBanner } from './PageBanner/PageBanner';
+export { Whyus } from './Whyus/Whyus';

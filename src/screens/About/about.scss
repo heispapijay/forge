@@ -1,5 +1,10 @@
 .about-screen{
-    font-size: 100px;
     text-align: center;
-    margin: 100px 0;
+}
+
+.about-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -24,19 +24,19 @@ export const Footer = () => {
               Ocala, FL.
             </p>
             <div className="footer-links">
-              <a href="/">Home</a>
-              <a href="/about">About</a>
-              <a href="/work">Work</a>
-              <a href="#">Terms</a>
-              <a href="#">Policy</a>
+              <Link to="/">Home</Link>
+              <Link to="about">About</Link>
+              <Link to="/work">Work</Link>
+              <Link to="#">Terms</Link>
+              <Link to="#">Policy</Link>
             </div>
           </div>
           <div className="right-footer">
             <div className="social-links">
-              <a href="#"><img src={facebook} alt="facebook" /></a>
-              <a href="#"><img src={dribble} alt="dribble" /></a>
-              <a href="#"><img src={instagram} alt="instagram" /></a>
-              <a href="#"><img src={linkedin} alt="linkedin" /></a>
+              <Link to="#"><img src={facebook} alt="facebook" /></Link>
+              <Link to="#"><img src={dribble} alt="dribble" /></Link>
+              <Link to="#"><img src={instagram} alt="instagram" /></Link>
+              <Link to="#"><img src={linkedin} alt="linkedin" /></Link>
             </div>
             <div className="contact-info">
               <p>hello@forgestudio.com</p>
@@ -46,7 +46,7 @@ export const Footer = () => {
         </div>
         <div className="footer-buttom">
           <p>&copy; 2024 Forge Studio. All rights reserved.</p>
-          <p className="developedby">Developed by <a href="https://opaleke.vercel.app/">Josiah Opaleke</a></p>
+          <p className="developedby">Developed by <Link to="https://opaleke.vercel.app/">Josiah Opaleke</Link></p>
         </div>
       </div>
     </div>
