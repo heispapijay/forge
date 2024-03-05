@@ -161,6 +161,38 @@
   }
 }
 
+//ABOUT US CARD
+
+.about-us-card {
+  max-width: 450px;
+  text-align: left;
+  padding: 15px;
+  border: 1px solid $neutralColor2;
+  border-top: 1px; 
+  border-bottom: 2px solid $neutralColor2;
+  border-radius: 10px;
+
+  h2, p {
+    color: $neutralColor2
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  &:hover {
+    background: $neutralColor2;
+    h2, p {
+      color: $neutralColor7;
+    }
+  }
+}
+
 
 
 //MEDIA QUERIES

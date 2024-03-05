@@ -1,7 +1,26 @@
 
+.aboutus {
+    display: flex;
+    justify-content: space-between;
+}
 
 .aboutus-img {
     width: 480px;
-    height: 476px;
+    height: 347px;
     background-color: blue;
+}
+
+.aboutus-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutus {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 }
