@@ -1,6 +1,3 @@
-import { AboutUsCard } from './Cards/AboutUsCard';
-
-// export { Home } from './Home';
 
 export { About } from './About/About';
 export { Banner } from './Banner/Banner';
@@ -15,4 +12,5 @@ export { Blognew } from './Blognew/Blognew';
 export { CTA } from './CTA/CTA';
 export { PageBanner } from './PageBanner/PageBanner';
 export { Whyus } from './Whyus/Whyus';
+export { AboutUsCard } from './Cards/AboutUsCard';
 export { Values } from './Values/Values';
