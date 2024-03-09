@@ -1,4 +1,6 @@
+import Marquee from "react-fast-marquee";
 import { Brand, Button, PageBanner } from "../../components";
+
 import { AboutUs } from "../../containers/AboutUs/AboutUs";
 import "./about.scss";
 
@@ -13,8 +15,20 @@ export const About = () => {
           />
           <Button text="Join Our Team" to="/" />
         </div>
+        <div className="move-picture">
+        <Marquee gradient gradientWidth={100}>
+          <div className="image1"></div>
+          <div className="image2"></div>
+          <div className="image3"></div>
+          <div className="image4"></div>
+          <div className="image5"></div>
+          <div className="image6"></div>
+          <div className="image7"></div>
+        </Marquee>
+        </div>
         <Brand />
         <AboutUs />
+        {/* <CoreValues /> */}
       </div>
     </div>
   );

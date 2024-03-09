@@ -8,8 +8,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { About, Home, Contactus, Work } from "./screens";
 import { Footer } from "./containers";
 
-
-
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -33,10 +31,12 @@ function App() {
           <BrowserRouter>
             <Navbar />
             <Routes>
-            
               <Route path="/" />
               <Route index element={<Home />} />
-              <Route path="*" element={<div className="error">Page not found</div>} />
+              <Route
+                path="*"
+                element={<div className="error">Page not found</div>}
+              />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contactus />} />
               <Route path="work" element={<Work />} />

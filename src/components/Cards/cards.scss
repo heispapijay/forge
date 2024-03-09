@@ -204,6 +204,12 @@
     }}
 }
 
+@media screen and (max-width: 900px) {
+  .about-us-card {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 704px) {
   .service-image {
     img {

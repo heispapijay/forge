@@ -4,6 +4,8 @@ import "./aboutus.scss";
 export const AboutUs = () => {
   return (
     <div className="aboutus">
+      <div className="default-wrapper">
+      <div className="about-container">
       <div className="aboutus-left">
         <div className="subheaders">
           <p className="tagline">Meet Forge</p>
@@ -30,6 +32,8 @@ export const AboutUs = () => {
           title="What we do"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
         />
+      </div>
+      </div>
       </div>
     </div>
   );
