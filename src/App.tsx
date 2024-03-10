@@ -1,12 +1,12 @@
 import "./App.css";
 import "./utils/resetstyle.scss";
-import { Navbar } from "./components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import { ScaleLoader } from "react-spinners";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom"; // Import useLocation
 import Logo from "./components/Logo/Logo";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { About, Home, Contactus, Work } from "./screens";
 import { Footer } from "./containers";
+import { Navbar } from "./components";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <BrowserRouter>
       {loading ? (
         <div className="loader">
           <ScaleLoader color={"#23262f"} loading={loading} />
@@ -27,25 +27,41 @@ function App() {
           </div>
         </div>
       ) : (
-        <div>
-          <BrowserRouter>
-            <Navbar />
-            <Routes>
-              <Route path="/" />
-              <Route index element={<Home />} />
-              <Route
-                path="*"
-                element={<div className="error">Page not found</div>}
-              />
-              <Route path="about" element={<About />} />
-              <Route path="contact" element={<Contactus />} />
-              <Route path="work" element={<Work />} />
-            </Routes>
-            <Footer />
-          </BrowserRouter>
-        </div>
+        <LoadedApp />
       )}
-    </>
+    </BrowserRouter>
+  );
+}
+
+function LoadedApp() {
+  const [locationLoaded, setLocationLoaded] = useState(false);
+  const location = useLocation(); // Use useLocation hook
+
+  useEffect(() => {
+    setLocationLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (locationLoaded) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Smooth scrolling behavior
+      });
+    }
+   }, [location, locationLoaded]);
+
+  return (
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contactus />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="*" element={<div className="error">Page not found</div>} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
