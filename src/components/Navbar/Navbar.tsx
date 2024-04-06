@@ -9,6 +9,9 @@ export const Navbar = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
   return (
     <nav className="nav">
       <div className="navbar  wrapper">
@@ -56,7 +59,7 @@ export const Navbar = () => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="mobile-menu">
+        <div className="mobile-menu" onClick={closeMobileMenu}>
           <Link to="/">Home</Link>
           <Link to="about">About</Link>
           <Link to="/work">Work</Link>
