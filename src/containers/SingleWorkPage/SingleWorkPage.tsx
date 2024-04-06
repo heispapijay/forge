@@ -20,7 +20,7 @@ export const SingleWorkPage = () => {
 
   useEffect(() => {
     if (id) {
-      fetch('/workData.json')
+      fetch('https://forge-ashy.vercel.app/workData.json')
         .then(response => response.json())
         .then((data: { projects: Project[] }) => {
           // Find the project with the matching id

@@ -16,7 +16,7 @@ export const Work: React.FC = () => {
 
   useEffect(() => {
     // Fetch project data from JSON file
-    fetch("/workData.json")
+    fetch("https://forge-ashy.vercel.app/workData.json")
       .then((response) => response.json())
       .then((data: { projects: Project[] }) => {
         setProjects(data.projects); // Set project data to state
