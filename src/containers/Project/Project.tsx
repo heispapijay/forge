@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ServiceCard, WorkCard } from "../../components";
 import branding from "../../assets/serviceimg/01.webp";
 import design from "../../assets/serviceimg/02.webp";

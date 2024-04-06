@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./singleworkpage.scss";
 import arrow from "../../assets/arrow.svg";
 import scrolldown from "../../assets/scrolldown.svg";
