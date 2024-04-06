@@ -20,7 +20,7 @@ export const SingleWorkPage = () => {
 
   useEffect(() => {
     if (id) {
-      fetch('/src/utils/workData.json')
+      fetch('../../utils/workData.json')
         .then(response => response.json())
         .then((data: { projects: Project[] }) => {
           // Find the project with the matching id
