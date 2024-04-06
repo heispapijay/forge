@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { PageBanner, WorkCard } from "../../components";
 import "./work.scss";
 import Marquee from "react-fast-marquee";
-import project2 from "../../assets/project/02.webp";
+import project2 from "/project/02.webp";
 
 interface Project {
   id: number;

@@ -6,35 +6,35 @@
         "title": "John Walter Concept",
         "content": "Design",
         "contentSummary": "Discover how we gave this startup a fresh visual start. With over 50 team members, 5000+ users and 27M, it was time to replace their outdated look with a design that matched their ambitions. Webflow is the Berlin-based Series A startup on its way to becoming the leading finance platform for SMEs, freelancers, and self-employed persons.",
-        "image": "../../src/assets/project/01.webp"
+        "image": "/project/01.webp"
       },
       {
         "id": 2,
         "title": "Hazard 1990",
         "content": "Branding",
         "contentSummary": "Description of project 2.",
-        "image": "../../src/assets/project/02.webp"
+        "image": "/project/02.webp"
       },
       {
         "id": 3,
         "title": "Fray PTG",
         "content": "Branding",
         "contentSummary": "Description of project 3.",
-        "image": "../../src/assets/project/03.webp"
+        "image": "/project/03.webp"
       },
       {
         "id": 4,
         "title": "Pluto",
         "content": "Development",
         "contentSummary": "Description of project 4.",
-        "image": "../../src/assets/project/04.webp"
+        "image": "/project/04.webp"
       },
       {
         "id": 5,
         "title": "Mother NE",
         "content": "Design",
         "contentSummary": "Description of project 4.",
-        "image": "../../src/assets/project/05.webp"
+        "image": "/project/05.webp"
       }
     ]
   }
