@@ -19,20 +19,22 @@ export const SingleWorkPage = () => {
   const { id } = useParams<{ id?: string }>();
 
   useEffect(() => {
-    if (id) { // Check if id is defined
-      setLoading(true); // Set loading to true when fetching data
-      fetch('/workData.json')
-        .then(response => response.json())
+    if (id) {
+      setLoading(true);
+      fetch("/workData.json")
+        .then((response) => response.json())
         .then((data: { projects: Project[] }) => {
-          const selectedProject = data.projects.find(project => project.id === parseInt(id));
+          const selectedProject = data.projects.find(
+            (project) => project.id === parseInt(id)
+          );
           if (selectedProject) {
             setProject(selectedProject);
           } else {
             console.error("Project not found for id:", id);
           }
-          setLoading(false); // Set loading to false once data is fetched
+          setLoading(false);
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("Error fetching project data:", error);
           setLoading(false);
         });
@@ -40,13 +42,13 @@ export const SingleWorkPage = () => {
   }, [id]);
 
   if (loading) {
-    return <div>Loading...</div>; // Display loading message while fetching data
+    return <div>Loading...</div>;
   }
 
   if (!project) {
-    return <div>Project not found</div>; // Display message if project not found
+    return <div>Project not found</div>;
   }
-  
+
   return (
     <div className="single-work-page">
       <div className="default-wrapper">
@@ -61,7 +63,11 @@ export const SingleWorkPage = () => {
             </a>
           </div>
           <div className="single-work-img-width">
-            <img className="single-work-img" src={project.image} alt="project image" />
+            <img
+              className="single-work-img"
+              src={project.image}
+              alt="project image"
+            />
           </div>
           <div className="work-outline">
             <div className="work-summary">
@@ -71,26 +77,32 @@ export const SingleWorkPage = () => {
             <div className="things-done">
               <h3>What we've done</h3>
               <ol>
+                <li>Collaboration with {project.title}</li>
                 <li>Strategic Discovery</li>
-                <li>Strategic Discovery</li>
-                <li>Strategic Discovery</li>
-                <li>Strategic Discovery</li>
-                <li>Strategic Discovery</li>
+                <li>Brand Identity Development</li>
+                <li>Extensive Research</li>
+                <li>Digital Presence Revamp</li>
               </ol>
             </div>
             <div className="levels">
-                <h3>Levels asked as to help</h3>
+              <h3>Levels asked as to help</h3>
               <ul>
-                <li>Strategic Discovery</li>
-                <li>Strategic Discovery</li>
-                <li>Strategic Discovery</li>
+                <li>Brand Modernization</li>
+                <li>Digital Experience Enhancement</li>
+                <li>Strategic Consultation</li>
               </ul>
             </div>
             <p className="conclusion">
-              Creating a landing page with clear and targeted messaging was a
-              crucial step in increasing conversions. Together with the Webflow
-              team, we have compiled a new product page structure using the AIDA
-              model and packed that in a nice cover{" "}
+              Each project at Forge Creative Agency is a testament to our
+              commitment to excellence and innovation. By combining strategic
+              insight with creative vision, we transform concepts into
+              compelling realities that resonate with audiences and drive
+              tangible results. Our collaborative approach ensures that every
+              project is tailored to meet the unique objectives and challenges
+              of our clients, resulting in impactful solutions that stand the
+              test of time. As we continue to push the boundaries of creativity
+              and technology, we remain dedicated to delivering exceptional
+              outcomes that exceed expectations and inspire success.
             </p>
           </div>
         </div>
