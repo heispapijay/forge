@@ -18,7 +18,7 @@ export const Project = () => {
 
   useEffect(() => {
     // Fetch project data from JSON file
-    fetch("/src/utils/workData.json")
+    fetch("/workData.json")
       .then((response) => response.json())
       .then((data: { projects: Project[] }) => {
         setProjects(data.projects); // Set project data to state
