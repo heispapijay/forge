@@ -18,11 +18,10 @@ export const Project = () => {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    // Fetch project data from JSON file
     fetch("/workData.json")
       .then((response) => response.json())
       .then((data: { projects: Project[] }) => {
-        setProjects(data.projects); // Set project data to state
+        setProjects(data.projects); 
       })
       .catch((error) => console.error("Error fetching project data:", error));
   }, []);

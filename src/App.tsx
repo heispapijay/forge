@@ -7,7 +7,7 @@ import Logo from "./components/Logo/Logo";
 import { About, Home, Contactus, Work } from "./screens";
 import { Footer } from "./containers";
 import { Navbar } from "./components";
-import { SingleWorkPageWrapper } from "./containers/SingleWorkPage/SinglePageWrapper";
+import { SingleWorkPage } from "./containers/SingleWorkPage/SingleWorkPage";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -59,7 +59,7 @@ function LoadedApp() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/work" element={<Work />} />
-        <Route path="/work/:id" element={<SingleWorkPageWrapper />} />
+        <Route path="/work/:id" element={<SingleWorkPage />} />
         <Route
           path="*"
           element={<div className="error">Page not found</div>}

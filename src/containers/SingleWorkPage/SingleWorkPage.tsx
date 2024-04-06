@@ -16,14 +16,14 @@ interface Project {
 export const SingleWorkPage = () => {
   const [project, setProject] = useState<Project | null>(null);
   const [loading, setLoading] = useState(true);
-  const { id } = useParams();
+  const { id } = useParams<{ id?: string }>();
 
   useEffect(() => {
-    if (id) {
+    if (id) { // Check if id is defined
+      setLoading(true); // Set loading to true when fetching data
       fetch('/workData.json')
         .then(response => response.json())
         .then((data: { projects: Project[] }) => {
-          // Find the project with the matching id
           const selectedProject = data.projects.find(project => project.id === parseInt(id));
           if (selectedProject) {
             setProject(selectedProject);
