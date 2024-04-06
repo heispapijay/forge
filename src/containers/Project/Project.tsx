@@ -5,6 +5,7 @@ import design from "../../assets/serviceimg/02.webp";
 import developement from "../../assets/serviceimg/03.webp";
 import arrow from "../../assets/arrow.svg";
 import "./project.scss";
+import { Link } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -18,7 +19,7 @@ export const Project = () => {
 
   useEffect(() => {
     // Fetch project data from JSON file
-    fetch("https://forge-ashy.vercel.app/workData.json")
+    fetch("/workData.json")
       .then((response) => response.json())
       .then((data: { projects: Project[] }) => {
         setProjects(data.projects); // Set project data to state
@@ -66,24 +67,24 @@ export const Project = () => {
           <div className="our-work">
             <div className="left-side">
             {leftProjects.map((project) => (
-                  <a key={project.id} href={`/work/${project.id}`}>
+                  <Link key={project.id} to={`/work/${project.id}`}>
                     <WorkCard
                       title={project.title}
                       tag={project.content}
                       image={project.image}
                     />
-                  </a>
+                  </Link>
                 ))}
             </div>
             <div className="right-side">
             {rightProjects.map((project) => (
-                  <a key={project.id} href={`/work/${project.id}`}>
+                  <Link key={project.id} to={`/work/${project.id}`}>
                     <WorkCard
                       title={project.title}
                       tag={project.content}
                       image={project.image}
                     />
-                  </a>
+                  </Link>
                 ))}
               <div className="view-more">
                 <span className="sphereimage">

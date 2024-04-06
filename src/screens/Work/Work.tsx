@@ -3,6 +3,7 @@ import { PageBanner, WorkCard } from "../../components";
 import "./work.scss";
 import Marquee from "react-fast-marquee";
 import project2 from "/project/02.webp";
+import { Link } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -16,7 +17,7 @@ export const Work: React.FC = () => {
 
   useEffect(() => {
     // Fetch project data from JSON file
-    fetch("https://forge-ashy.vercel.app/workData.json")
+    fetch("/workData.json")
       .then((response) => response.json())
       .then((data: { projects: Project[] }) => {
         setProjects(data.projects); // Set project data to state
@@ -52,24 +53,24 @@ export const Work: React.FC = () => {
             <div className="our-work">
               <div className="left-side">
                 {leftProjects.map((project) => (
-                  <a key={project.id} href={`/work/${project.id}`}>
+                  <Link key={project.id} to={`/work/${project.id}`}>
                     <WorkCard
                       title={project.title}
                       tag={project.content}
                       image={project.image}
                     />
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div className="right-side">
                 {rightProjects.map((project) => (
-                  <a key={project.id} href={`/work/${project.id}`}>
+                  <Link key={project.id} to={`/work/${project.id}`}>
                     <WorkCard
                       title={project.title}
                       tag={project.content}
                       image={project.image}
                     />
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
