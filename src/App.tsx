@@ -7,6 +7,7 @@ import Logo from "./components/Logo/Logo";
 import { About, Home, Contactus, Work } from "./screens";
 import { Footer } from "./containers";
 import { Navbar } from "./components";
+import { SingleWorkPageWrapper } from "./containers/SingleWorkPage/SinglePageWrapper";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -35,7 +36,7 @@ function App() {
 
 function LoadedApp() {
   const [locationLoaded, setLocationLoaded] = useState(false);
-  const location = useLocation(); // Use useLocation hook
+  const location = useLocation(); 
 
   useEffect(() => {
     setLocationLoaded(true);
@@ -45,12 +46,12 @@ function LoadedApp() {
     if (locationLoaded) {
       window.scrollTo({
         top: 0,
-        behavior: "smooth" // Smooth scrolling behavior
+        behavior: "smooth" 
       });
     }
    }, [location, locationLoaded]);
 
-  return (
+   return (
     <div>
       <Navbar />
       <Routes>
@@ -58,7 +59,11 @@ function LoadedApp() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/work" element={<Work />} />
-        <Route path="*" element={<div className="error">Page not found</div>} />
+        <Route path="/work/:id" element={<SingleWorkPageWrapper />} />
+        <Route
+          path="*"
+          element={<div className="error">Page not found</div>}
+        />
       </Routes>
       <Footer />
     </div>

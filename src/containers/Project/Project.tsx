@@ -1,16 +1,34 @@
+import React, { useState, useEffect } from "react";
 import { ServiceCard, WorkCard } from "../../components";
 import branding from "../../assets/serviceimg/01.webp";
 import design from "../../assets/serviceimg/02.webp";
 import developement from "../../assets/serviceimg/03.webp";
-import project1 from "../../assets/project/01.webp";
-import project2 from "../../assets/project/02.webp";
-import project3 from "../../assets/project/03.webp";
-import project4 from "../../assets/project/04.webp";
-import project5 from "../../assets/project/05.webp";
 import arrow from "../../assets/arrow.svg";
 import "./project.scss";
 
+interface Project {
+  id: number;
+  title: string;
+  content: string;
+  image: string;
+}
+
 export const Project = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    // Fetch project data from JSON file
+    fetch("/src/utils/workData.json")
+      .then((response) => response.json())
+      .then((data: { projects: Project[] }) => {
+        setProjects(data.projects); // Set project data to state
+      })
+      .catch((error) => console.error("Error fetching project data:", error));
+  }, []);
+
+  const leftProjects: Project[] = projects.slice(0, 3);
+  const rightProjects: Project[] = projects.slice(3);
+
   return (
     <div className="project-section">
       <div className="default-wrapper">
@@ -47,17 +65,26 @@ export const Project = () => {
           </div>
           <div className="our-work">
             <div className="left-side">
-              <WorkCard
-                title="John Walter Concept"
-                tag="Design"
-                image={project1}
-              />
-              <WorkCard title="Hazard 1990" tag="Branding" image={project2} />
-              <WorkCard title="Hazard 1990" tag="Branding" image={project3} />
+            {leftProjects.map((project) => (
+                  <a key={project.id} href={`/work/${project.id}`}>
+                    <WorkCard
+                      title={project.title}
+                      tag={project.content}
+                      image={project.image}
+                    />
+                  </a>
+                ))}
             </div>
             <div className="right-side">
-              <WorkCard title="Pluto" tag="Development" image={project4} />
-              <WorkCard title="Bubox" tag="Design" image={project5} />
+            {rightProjects.map((project) => (
+                  <a key={project.id} href={`/work/${project.id}`}>
+                    <WorkCard
+                      title={project.title}
+                      tag={project.content}
+                      image={project.image}
+                    />
+                  </a>
+                ))}
               <div className="view-more">
                 <span className="sphereimage">
                   <svg

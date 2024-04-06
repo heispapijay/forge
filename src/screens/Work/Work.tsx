@@ -1,14 +1,33 @@
+import React, { useState, useEffect } from "react";
 import { PageBanner, WorkCard } from "../../components";
 import "./work.scss";
-
-import project1 from "../../assets/project/01.webp";
-import project2 from "../../assets/project/02.webp";
-import project3 from "../../assets/project/03.webp";
-import project4 from "../../assets/project/04.webp";
-import project5 from "../../assets/project/05.webp";
 import Marquee from "react-fast-marquee";
+import project2 from "../../assets/project/02.webp";
 
-export const Work = () => {
+interface Project {
+  id: number;
+  title: string;
+  content: string;
+  image: string;
+}
+
+export const Work: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([]); // State to store project data
+
+  useEffect(() => {
+    // Fetch project data from JSON file
+    fetch("/src/utils/workData.json")
+      .then((response) => response.json())
+      .then((data: { projects: Project[] }) => {
+        setProjects(data.projects); // Set project data to state
+      })
+      .catch((error) => console.error("Error fetching project data:", error));
+  }, []);
+
+  // Divide projects into left and right sections
+  const leftProjects: Project[] = projects.slice(0, 3);
+  const rightProjects: Project[] = projects.slice(3);
+
   return (
     <div className="work-screen">
       <PageBanner
@@ -16,12 +35,10 @@ export const Work = () => {
         content="Whereby is the super simple way to connect over video. No downloads or long having into meeting links."
       />
       <div className="our-latest">
-        {/* <p className="work-text">Our Latest</p> */}
         <img className="latest-work" src={project2} alt="latest image" />
-        {/* <p className="work-text2">Project</p> */}
         <Marquee>
           <p className="work-text">
-            Our Latest Work Our Latest Work Our Latest Work
+            Our Latest Work &nbsp; Our Latest Work &nbsp; Our Latest Work &nbsp; Our Latest Work
           </p>
         </Marquee>
       </div>
@@ -34,17 +51,26 @@ export const Work = () => {
             </div>
             <div className="our-work">
               <div className="left-side">
-                <WorkCard
-                  title="John Walter Concept"
-                  tag="Design"
-                  image={project1}
-                />
-                <WorkCard title="Hazard 1990" tag="Branding" image={project2} />
-                <WorkCard title="Hazard 1990" tag="Branding" image={project3} />
+                {leftProjects.map((project) => (
+                  <a key={project.id} href={`/work/${project.id}`}>
+                    <WorkCard
+                      title={project.title}
+                      tag={project.content}
+                      image={project.image}
+                    />
+                  </a>
+                ))}
               </div>
               <div className="right-side">
-                <WorkCard title="Pluto" tag="Development" image={project4} />
-                <WorkCard title="Bubox" tag="Design" image={project5} />
+                {rightProjects.map((project) => (
+                  <a key={project.id} href={`/work/${project.id}`}>
+                    <WorkCard
+                      title={project.title}
+                      tag={project.content}
+                      image={project.image}
+                    />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
