@@ -59,24 +59,24 @@ export const Work: React.FC = () => {
             <div className="our-work">
               <div className="left-side">
                 {leftProjects.map((project) => (
-                  <Link key={project.id} to={`/work/${project.id}`}>
+                  <a key={project.id} href={`/work/${project.id}`}>
                     <WorkCard
                       title={project.title}
                       tag={project.content}
                       image={project.image}
                     />
-                  </Link>
+                  </a>
                 ))}
               </div>
               <div className="right-side">
                 {rightProjects.map((project) => (
-                  <Link key={project.id} to={`/work/${project.id}`}>
+                  <a key={project.id} href={`/work/${project.id}`}>
                     <WorkCard
                       title={project.title}
                       tag={project.content}
                       image={project.image}
                     />
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
