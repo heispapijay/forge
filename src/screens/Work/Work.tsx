@@ -16,20 +16,15 @@ export const Work: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]); 
 
   useEffect(() => {
-    // Check if data exists in local storage
     const storedData = localStorage.getItem('projectData');
   
     if (storedData) {
-      // If data exists, parse and set it to state
       setProjects(JSON.parse(storedData));
     } else {
-      // If data doesn't exist, fetch it from the server
-      fetch("/workData.json")
+      fetch("https://forge-ashy.vercel.app/workData.json")
         .then((response) => response.json())
         .then((data: { projects: Project[] }) => {
-          // Set project data to state
           setProjects(data.projects);
-          // Save data to local storage
           localStorage.setItem('projectData', JSON.stringify(data.projects));
         })
         .catch((error) => console.error("Error fetching project data:", error));
