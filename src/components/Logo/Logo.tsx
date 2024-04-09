@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import './logo.scss'
+import "./logo.scss";
 
 const Logo: React.FC = () => {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const targetText = "✦ Forge";
-  const [animationInterval, setAnimationInterval] = useState<number | null>(
-    null
-  );
-  const [animationTimeout, setAnimationTimeout] = useState<number | null>(null);
+  const [animationInterval, setAnimationInterval] =
+    useState<NodeJS.Timeout | null>(null);
+  const [animationTimeout, setAnimationTimeout] =
+    useState<NodeJS.Timeout | null>(null);
   const [text, setText] = useState<string>("");
 
   useEffect(() => {
@@ -22,7 +22,10 @@ const Logo: React.FC = () => {
 
   const startAnimation = () => {
     let iteration = 0;
+
+    // Clear existing interval and timeout
     if (animationInterval) clearInterval(animationInterval);
+    if (animationTimeout) clearTimeout(animationTimeout);
 
     const interval = setInterval(() => {
       const newText = Array.from({ length: targetText.length }, (_, index) => {
