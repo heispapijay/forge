@@ -3,7 +3,6 @@ import { PageBanner, WorkCard } from "../../components";
 import "./work.scss";
 import Marquee from "react-fast-marquee";
 import project2 from "/project/02.webp";
-import { Link } from "react-router-dom";
 
 interface Project {
   id: number;
