@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { ServiceCard, WorkCard } from "../../components";
 import branding from "../../assets/serviceimg/01.webp";
 import design from "../../assets/serviceimg/02.webp";
@@ -6,33 +5,9 @@ import developement from "../../assets/serviceimg/03.webp";
 import arrow from "../../assets/arrow.svg";
 import "./project.scss";
 import { Link } from "react-router-dom";
+import { Project, projects } from "../../utils/data/projectData";
 
-interface Project {
-  id: number;
-  title: string;
-  content: string;
-  image: string;
-}
-
-export const Project = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
-
-  useEffect(() => {
-    const storedData = localStorage.getItem('projectData');
-  
-    if (storedData) {
-      setProjects(JSON.parse(storedData));
-    } else {
-      fetch("https://forge-ashy.vercel.app/workData.json")
-        .then((response) => response.json())
-        .then((data: { projects: Project[] }) => {
-          setProjects(data.projects);
-          localStorage.setItem('projectData', JSON.stringify(data.projects));
-        })
-        .catch((error) => console.error("Error fetching project data:", error));
-    }
-  }, []);
-  
+export const MyProject = () => {  
 
   const leftProjects: Project[] = projects.slice(0, 3);
   const rightProjects: Project[] = projects.slice(3);

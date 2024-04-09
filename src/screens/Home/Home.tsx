@@ -1,7 +1,7 @@
 import "./home.scss";
 import arrow from "../../assets/arrow.svg";
 import scrolldown from "../../assets/scrolldown.svg";
-import { BlogSection, Hero, Meetus, Project, Review } from "../../containers";
+import { BlogSection, Hero, Meetus, MyProject, Review } from "../../containers";
 
 export const Home = () => {
   return (
@@ -16,7 +16,7 @@ export const Home = () => {
         </a>
       </div>
       <Meetus />
-      <Project />
+      <MyProject />
       <Review />
       <BlogSection />
     </div>

@@ -1,35 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { PageBanner, WorkCard } from "../../components";
 import "./work.scss";
 import Marquee from "react-fast-marquee";
 import project2 from "/project/02.webp";
+import { Project, projects } from "../../utils/data/projectData";
 
-interface Project {
-  id: number;
-  title: string;
-  content: string;
-  image: string;
-}
-
-export const Work: React.FC = () => {
-  const [projects, setProjects] = useState<Project[]>([]); 
-
-  useEffect(() => {
-    const storedData = localStorage.getItem('projectData');
-  
-    if (storedData) {
-      setProjects(JSON.parse(storedData));
-    } else {
-      fetch("https://forge-ashy.vercel.app/workData.json")
-        .then((response) => response.json())
-        .then((data: { projects: Project[] }) => {
-          setProjects(data.projects);
-          localStorage.setItem('projectData', JSON.stringify(data.projects));
-        })
-        .catch((error) => console.error("Error fetching project data:", error));
-    }
-  }, []);
-  
+export const Work: React.FC = () => {  
 
   const leftProjects: Project[] = projects.slice(0, 3);
   const rightProjects: Project[] = projects.slice(3);
