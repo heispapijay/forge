@@ -4,14 +4,7 @@ import arrow from "../../assets/arrow.svg";
 import scrolldown from "../../assets/scrolldown.svg";
 import { PageBanner } from "../../components";
 import { useParams } from "react-router-dom";
-
-interface Project {
-  id: number;
-  title: string;
-  content: string;
-  contentSummary: string;
-  image: string;
-}
+import { Project, projects } from "../../utils/data/projectData"
 
 export const SingleWorkPage = () => {
   const [project, setProject] = useState<Project | null>(null);
@@ -21,23 +14,15 @@ export const SingleWorkPage = () => {
   useEffect(() => {
     if (id) {
       setLoading(true);
-      fetch("/workData.json")
-        .then((response) => response.json())
-        .then((data: { projects: Project[] }) => {
-          const selectedProject = data.projects.find(
-            (project) => project.id === parseInt(id)
-          );
-          if (selectedProject) {
-            setProject(selectedProject);
-          } else {
-            console.error("Project not found for id:", id);
-          }
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.error("Error fetching project data:", error);
-          setLoading(false);
-        });
+      const selectedProject = projects.find(
+        (project) => project.id === parseInt(id)
+      );
+      if (selectedProject) {
+        setProject(selectedProject);
+      } else {
+        console.error("Project not found for id:", id);
+      }
+      setLoading(false);
     }
   }, [id]);
 
