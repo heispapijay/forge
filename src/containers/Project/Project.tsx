@@ -18,13 +18,13 @@ export const Project = () => {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    fetch("/workData.json")
-      .then((response) => response.json())
-      .then((data: { projects: Project[] }) => {
-        setProjects(data.projects); 
-      })
-      .catch((error) => console.error("Error fetching project data:", error));
-  }, []);
+    fetch("/workData.json?timestamp=" + new Date().getTime())
+    .then((response) => response.json())
+    .then((data: { projects: Project[] }) => {
+      setProjects(data.projects); 
+    })
+    .catch((error) => console.error("Error fetching project data:", error));
+}, []);
 
   const leftProjects: Project[] = projects.slice(0, 3);
   const rightProjects: Project[] = projects.slice(3);

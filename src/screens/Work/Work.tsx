@@ -17,13 +17,13 @@ export const Work: React.FC = () => {
 
   useEffect(() => {
     // Fetch project data from JSON file
-    fetch("/workData.json")
-      .then((response) => response.json())
-      .then((data: { projects: Project[] }) => {
-        setProjects(data.projects); // Set project data to state
-      })
-      .catch((error) => console.error("Error fetching project data:", error));
-  }, []);
+    fetch("/workData.json?timestamp=" + new Date().getTime())
+    .then((response) => response.json())
+    .then((data: { projects: Project[] }) => {
+      setProjects(data.projects); // Set project data to state
+    })
+    .catch((error) => console.error("Error fetching project data:", error));
+}, []);
 
   // Divide projects into left and right sections
   const leftProjects: Project[] = projects.slice(0, 3);
