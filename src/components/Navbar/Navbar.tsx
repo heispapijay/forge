@@ -14,7 +14,7 @@ export const Navbar = () => {
   };
   return (
     <nav className="nav">
-      <div className="navbar  wrapper">
+      <div className="navbar wrapper">
         <div className="nav-logo">
          <Link to="/"><Logo /></Link>
         </div>
